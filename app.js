@@ -1,11 +1,9 @@
-var express = require('express');
-var app = express();
+var http = require('http');
 
-app.get('/', function(req, res) {
-	res.send('On Heroku Node.js+Express');
-});
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello Heroku!\n');
+}).listen(80, '127.0.0.1');
 
-app.listen(80, function() {
-	console.log("Listening on 80");
-});
+console.log('Server running at http://127.0.0.1:80/');
 
