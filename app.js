@@ -1,9 +1,11 @@
-var http = require('http');
+var express = require('express');
+var app = express();
 
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello Heroku!\n');
-}).listen(process.env.PORT);
+app.get('/', function(req, res) {
+	res.send('On Heroku Node.js+Express');
+});
 
-console.log('Server running');
+app.listen(process.env.PORT, function() {
+	console.log("Listening");
+});
 
