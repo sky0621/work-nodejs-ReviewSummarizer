@@ -1,0 +1,15 @@
+{
+  "name": "work-nodejs-ReviewSummarizer",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
